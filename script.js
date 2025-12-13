@@ -4,112 +4,39 @@
    ======================================== */
 
 // ========================================
-// INTRO VIDEO - BULLETPROOF VERSION
+// STUNNING LOADING BAR
 // ========================================
 window.addEventListener('DOMContentLoaded', function() {
-    const introScreen = document.querySelector('.intro-video-screen');
-    const video = document.getElementById('introVideo');
-    const skipBtn = document.querySelector('.skip-intro');
-    let hasShown = false;
+    const loadingScreen = document.querySelector('.loading-screen');
+    const loadingProgress = document.querySelector('.loading-progress');
+    const loadingPercentage = document.querySelector('.loading-percentage');
+    let progress = 0;
     
-    console.log('Intro video script loaded', {introScreen, video});
-    
-    function showWebsite() {
-        if (hasShown) {
-            console.log('Already shown, skipping');
-            return;
-        }
-        hasShown = true;
-        console.log('🚀 SHOWING WEBSITE NOW!');
+    // Smooth progress animation
+    const interval = setInterval(() => {
+        progress += Math.random() * 10;
+        if (progress > 100) progress = 100;
         
-        // Make sure body is scrollable
-        document.body.classList.add('loaded');
-        document.body.style.overflow = '';
-        document.body.style.overflowX = 'hidden';
-        document.body.style.overflowY = 'auto';
+        loadingProgress.style.width = progress + '%';
+        loadingPercentage.textContent = Math.floor(progress) + '%';
         
-        if (introScreen) {
-            console.log('Starting fade out animation');
-            // Trigger fade out
-            introScreen.classList.add('fade-out');
-            
-            // Remove after fade completes
+        if (progress >= 100) {
+            clearInterval(interval);
             setTimeout(() => {
-                console.log('✅ Removing intro screen - PAGE IS NOW VISIBLE');
-                introScreen.style.display = 'none';
-                if (introScreen.parentNode) {
-                    introScreen.parentNode.removeChild(introScreen);
+                loadingScreen.classList.add('fade-out');
+                document.body.classList.add('loaded');
+                document.body.style.overflow = '';
+                document.body.style.overflowX = 'hidden';
+                document.body.style.overflowY = 'auto';
+                
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                    if (loadingScreen.parentNode) {
+                    loadingScreen.parentNode.removeChild(loadingScreen);
                 }
-            }, 1600);
-        } else {
-            console.log('No intro screen found');
-        }
-    }
-    
-    // If no video or screen, show website immediately
-    if (!video || !introScreen) {
-        console.log('No video or intro screen, showing website');
-        showWebsite();
-        return;
-    }
-    
-    // Skip button
-    if (skipBtn) {
-        skipBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log('Skip button clicked');
-            if (video) {
-                video.pause();
-                video.currentTime = video.duration || 0;
-            }
-            showWebsite();
-        });
-    }
-    
-    // Video ended - MOST IMPORTANT
-    video.addEventListener('ended', function() {
-        console.log('📹 VIDEO ENDED!');
-        showWebsite();
-    });
-    
-    // Also try with onended
-    video.onended = function() {
-        console.log('📹 VIDEO ENDED (onended)!');
-        showWebsite();
-    };
-    
-    // Video error
-    video.addEventListener('error', function(e) {
-        console.log('Video error:', e);
-        showWebsite();
-    });
-    
-    // Click to skip
-    introScreen.addEventListener('click', function() {
-        console.log('Intro screen clicked');
-        if (video) video.pause();
-        showWebsite();
-    });
-    
-    // Safety timeout - if nothing happens in 20 seconds, show website
-    setTimeout(function() {
-        console.log('Safety timeout triggered');
-        showWebsite();
-    }, 20000);
-    
-    // Monitor video progress
-    video.addEventListener('timeupdate', function() {
-        if (video.currentTime > 0 && video.duration > 0) {
-            const progress = (video.currentTime / video.duration) * 100;
-            if (progress > 99) {
-                console.log('Video 99% complete, triggering end');
-                showWebsite();
-            }
-        }
-    });
-    
-    console.log('Video setup complete, duration:', video.duration);
+            }, 800);
+        }, 500);
+    }, 50);
 });
 
 // ========================================
