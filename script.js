@@ -10,11 +10,18 @@ window.addEventListener('DOMContentLoaded', function() {
     const loadingScreen = document.querySelector('.loading-screen');
     const loadingProgress = document.querySelector('.loading-progress');
     const loadingPercentage = document.querySelector('.loading-percentage');
+    
+    // Check if loading elements exist
+    if (!loadingScreen || !loadingProgress || !loadingPercentage) {
+        document.body.classList.add('loaded');
+        return;
+    }
+    
     let progress = 0;
     
-    // Smooth progress animation
-    const interval = setInterval(() => {
-        progress += Math.random() * 10;
+    // Smooth progress animation - faster speed
+    const interval = setInterval(function() {
+        progress += Math.random() * 15 + 5; // Faster progress
         if (progress > 100) progress = 100;
         
         loadingProgress.style.width = progress + '%';
@@ -22,21 +29,37 @@ window.addEventListener('DOMContentLoaded', function() {
         
         if (progress >= 100) {
             clearInterval(interval);
-            setTimeout(() => {
+            
+            // Show website immediately
+            setTimeout(function() {
                 loadingScreen.classList.add('fade-out');
                 document.body.classList.add('loaded');
                 document.body.style.overflow = '';
                 document.body.style.overflowX = 'hidden';
                 document.body.style.overflowY = 'auto';
                 
-                setTimeout(() => {
+                // Remove loading screen after fade
+                setTimeout(function() {
                     loadingScreen.style.display = 'none';
                     if (loadingScreen.parentNode) {
-                    loadingScreen.parentNode.removeChild(loadingScreen);
-                }
-            }, 800);
-        }, 500);
-    }, 50);
+                        loadingScreen.parentNode.removeChild(loadingScreen);
+                    }
+                }, 600);
+            }, 300);
+        }
+    }, 40); // Faster interval
+    
+    // Safety timeout - show website after 3 seconds max
+    setTimeout(function() {
+        clearInterval(interval);
+        loadingScreen.classList.add('fade-out');
+        document.body.classList.add('loaded');
+        document.body.style.overflow = '';
+        document.body.style.overflowY = 'auto';
+        setTimeout(function() {
+            loadingScreen.style.display = 'none';
+        }, 600);
+    }, 3000);
 });
 
 // ========================================
