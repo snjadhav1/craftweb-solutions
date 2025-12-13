@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Featured Projects - Craftweb Solutions Portfolio showcasing live web applications, AI/ML projects, and full-stack development work">
+    <title>Featured Projects - Craftweb Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Cursor follower -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Craftweb Solutions Logo" class="logo-image">
+            <h1>Craftweb<span>Solutions</span></h1>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="projects.html" class="active">Portfolio</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Projects Hero Section -->
+    <section class="projects-hero">
+        <div class="projects-hero-content">
+            <h1 class="projects-hero-title" data-aos="fade-up">Our Featured Projects</h1>
+            <p class="projects-hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Explore our portfolio of innovative solutions spanning healthcare, education, analytics, and more. <br>
+                <em style="font-size: 0.9em; opacity: 0.8; margin-top: 10px; display: block;">Client privacy protected - Live demos available upon request</em>
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <!-- Project Filter -->
+            <div class="project-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn" data-filter="healthcare">
+                    Healthcare
+                </button>
+                <button class="filter-btn" data-filter="education">
+                    Education
+                </button>
+                <button class="filter-btn" data-filter="fitness">
+                    Fitness & Wellness
+                </button>
+                <button class="filter-btn" data-filter="hospitality">
+                    Hospitality
+                </button>
+                <button class="filter-btn" data-filter="analytics">
+                    Analytics
+                </button>
+                <button class="filter-btn" data-filter="productivity">
+                    Productivity
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-category-wrapper">
+                <div class="projects-grid" id="allProjects">
+                    <!-- Project 1: BRACON -->
+                    <div class="project-card" data-category="healthcare education" data-aos="zoom-in">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop" alt="BRACON EEG Monitoring System">
+                            <div class="project-number">01</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>BRACON - EEG Attention Monitoring System</h3>
+                                <span class="project-status status-active">Active</span>
+                            </div>
+                            <p class="project-description">
+                                Real-time brainwave monitoring platform featuring Arduino-based EEG signal processing, 
+                                live visual console for attention tracking, and comprehensive dashboard for continuous 
+                                neural activity analysis. Deployed with MySQL backend for data persistence.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">Arduino</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-footer">
+                                <span class="project-date">Aug 2025 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: CareFlex -->
+                    <div class="project-card" data-category="healthcare" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop" alt="CareFlex Healthcare Dashboard">
+                            <div class="project-number">02</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>CareFlex - Post C-Section Recovery Tracker</h3>
+                                <span class="project-status status-active">Active</span>
+                            </div>
+                            <p class="project-description">
+                                Patient-centric healthcare dashboard designed for post-operative C-section recovery monitoring. 
+                                Features FastAPI backend services, dynamic progress visualization charts, responsive UI layouts, 
+                                and real-time health metrics tracking for enhanced patient care.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">Chart.js</span>
+                            </div>
+                            <div class="project-footer">
+                                <span class="project-date">Nov 2024 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Digital Literacy Buddy -->
+                    <div class="project-card" data-category="education" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop" alt="Digital Literacy Platform">
+                            <div class="project-number">03</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Digital Literacy Buddy</h3>
+                                <span class="project-status status-completed">Completed</span>
+                            </div>
+                            <p class="project-description">
+                                Volunteer-driven digital literacy platform connecting users with tech-savvy helpers for real-time 
+                                assistance. Features responsive interface, clean navigation architecture, user-volunteer matching 
+                                system, and Flask-powered backend for seamless communication.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                            <div class="project-footer">
+                                <span class="project-date">Aug-Nov 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: DigiRetro Restaurant -->
+                    <div class="project-card" data-category="hospitality" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop" alt="Digital Restaurant Website">
+                            <div class="project-number">04</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>DigiRetro - Modern Restaurant Website</h3>
+                                <span class="project-status status-completed">Completed</span>
+                            </div>
+                            <p class="project-description">
+                                Fully responsive restaurant website with QR-based digital menu system, online reservation 
+                                capabilities, and interactive gallery. Features mobile-first design, smooth animations, 
+                                and optimized performance for fast loading across all devices.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Responsive Design</span>
+                                <span class="tech-tag">QR Integration</span>
+                            </div>
+                            <div class="project-footer">
+                                <span class="project-date">2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Social Media Analytics -->
+                    <div class="project-card" data-category="analytics" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Social Analytics Dashboard">
+                            <div class="project-number">05</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>SuperMind - Social Media Analytics</h3>
+                                <span class="project-status status-completed">Completed</span>
+                            </div>
+                            <p class="project-description">
+                                Advanced social media analytics platform with sentiment analysis, engagement metrics tracking, 
+                                and predictive insights. Features real-time data visualization using Chart.js, machine learning 
+                                models for trend prediction, and comprehensive reporting dashboard.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">ML Models</span>
+                                <span class="tech-tag">Chart.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <div class="project-footer">
+                                <span class="project-date">2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: AI Chatbot -->
+                    <div class="project-card" data-category="education" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=600&fit=crop" alt="AI Chatbot Interface">
+                            <div class="project-number">06</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>SkillCEF - Intelligent Career Chatbot</h3>
+                                <span class="project-status status-completed">Completed</span>
+                            </div>
+                            <p class="project-description">
+                                Natural language processing chatbot for career guidance featuring context-aware responses, 
+                                multi-turn conversation handling, and knowledge base integration. Uses TensorFlow for NLP 
+                                and provides personalized career recommendations based on user interactions.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-footer">
+                                <span class="project-date">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 7: AsanMLze -->
+                    <div class="project-card" data-category="fitness" data-aos="zoom-in">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop" alt="Yoga Pose Detection System">
+                            <div class="project-number">07</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>AsanMLze - Yoga Pose Detection System</h3>
+                                <span class="project-status status-completed">Completed</span>
+                            </div>
+                            <p class="project-description">
+                                Machine learning model for real-time yoga pose classification using MoveNet architecture, 
+                                achieving 95.32% accuracy. Features webcam-based pose detection, skeletal overlay visualization, 
+                                rule-based posture correction feedback system, and MediaPipe integration for body landmark detection.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">MediaPipe</span>
+                                <span class="tech-tag">MoveNet</span>
+                            </div>
+                            <div class="project-footer">
+                                <span class="project-date">Mar-Apr 2025</span>
+                                <span class="project-note">Academic Research Project</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8: ATS Resume Builder -->
+                    <div class="project-card" data-category="productivity" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop" alt="Resume Builder Interface">
+                            <div class="project-number">08</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>ATS-Friendly Resume Builder</h3>
+                                <span class="project-status status-completed">Completed</span>
+                            </div>
+                            <p class="project-description">
+                                Dynamic resume creation platform with real-time editing and ATS-optimized templates. 
+                                Integrated Google Gemini API for intelligent content phrasing, keyword enhancement suggestions, 
+                                and live preview functionality. Features multiple professional templates with export options.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Gemini API</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                            <div class="project-footer">
+                                <span class="project-date">Jul-Oct 2024</span>
+                                <span class="project-note">Client-Specific Solution - Under NDA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security & Privacy Notice -->
+            <div class="security-notice" data-aos="fade-up">
+                <div class="notice-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Client Privacy & Security</h3>
+                <p class="notice-message">
+                    For security and confidentiality reasons, direct access to our client projects is restricted. 
+                    <strong>Your privacy is our responsibility.</strong> We respect our clients' trust and ensure their 
+                    projects are protected at all times.
+                </p>
+                <p class="notice-submessage">
+                    Live project demonstrations are available only with explicit client authorization. 
+                    We maintain strict confidentiality agreements and never share client work publicly without permission.
+                </p>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="project-contact-section" data-aos="fade-up">
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Interested in Our Work?</h3>
+                    <p>Contact us to discuss your project requirements and see relevant portfolio samples</p>
+                    <div class="contact-details">
+                        <a href="mailto:infocraftwebsolutions@gmail.com" class="email-link">
+                            <i class="fas fa-paper-plane"></i>
+                            infocraftwebsolutions@gmail.com
+                        </a>
+                    </div>
+                    <p class="contact-cta">
+                        Whether you need a website, application, or digital solution, we're here to help. 
+                        Reach out for project consultations, quotes, and detailed portfolio presentations.
+                    </p>
+                    <a href="mailto:infocraftwebsolutions@gmail.com" class="btn-contact">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Craftweb Solutions</h3>
+                    <p>Transforming ideas into digital reality</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: infocraftwebsolutions@gmail.com</p>
+                    <p>Phone: +91 70385 24194</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Craftweb Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+</body>
+</html>

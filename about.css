@@ -1,0 +1,497 @@
+/* ========================================
+   ABOUT US PAGE - CO-FOUNDERS
+   Craftweb Solutions Theme
+   ======================================== */
+
+/* About Hero Section */
+.about-hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 120px 20px 80px;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    animation: pulseGlow 6s ease-in-out infinite;
+}
+
+.about-hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.about-hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.about-tag {
+    display: inline-block;
+    padding: 10px 25px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50px;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.about-hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.about-hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.hero-divider {
+    width: 120px;
+    height: 4px;
+    background: var(--gradient-1);
+    margin: 40px auto 0;
+    border-radius: 2px;
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Co-Founders Section */
+.cofounders-section {
+    padding: 100px 20px;
+    background: var(--dark-bg);
+    position: relative;
+}
+
+.cofounder-card {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 120px;
+    position: relative;
+}
+
+.cofounder-card.reverse {
+    grid-template-columns: 1fr 400px;
+}
+
+.cofounder-card.reverse .cofounder-image-wrapper {
+    order: 2;
+}
+
+.cofounder-card.reverse .cofounder-content {
+    order: 1;
+}
+
+/* Co-Founder Image */
+.cofounder-image-wrapper {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.image-border {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: 15px;
+    bottom: 15px;
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+    background: var(--gradient-1);
+    opacity: 0.2;
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+.cofounder-card:hover .image-border {
+    top: -25px;
+    left: -25px;
+    right: 25px;
+    bottom: 25px;
+    opacity: 0.3;
+}
+
+.cofounder-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease;
+}
+
+.cofounder-card:hover .cofounder-image {
+    transform: scale(1.03);
+}
+
+/* Image Overlay - Removed */
+
+/* Co-Founder Content */
+.cofounder-content {
+    padding: 20px;
+}
+
+.cofounder-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.cofounder-role {
+    font-size: 1.3rem;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.role-divider {
+    width: 80px;
+    height: 3px;
+    background: var(--gradient-1);
+    margin-bottom: 25px;
+    border-radius: 2px;
+}
+
+.cofounder-description {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* Expertise Tags */
+.expertise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.expertise-tag {
+    padding: 10px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 25px;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.expertise-tag:hover {
+    background: var(--gradient-1);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border-top: 2px solid rgba(59, 130, 246, 0.2);
+    border-bottom: 2px solid rgba(59, 130, 246, 0.2);
+}
+
+.mission-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.mission-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.mission-content p {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: var(--text-muted);
+}
+
+/* Back to Home Section */
+.back-home-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.btn-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 50px;
+    background: var(--gradient-1);
+    color: white;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-home::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-home:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.btn-home:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(59, 130, 246, 0.6);
+}
+
+.btn-home i {
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-home span {
+    position: relative;
+    z-index: 1;
+}
+
+/* About Footer */
+.about-footer {
+    padding: 40px 20px;
+    background: var(--darker-bg);
+    text-align: center;
+    border-top: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.about-footer p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .cofounder-card {
+        grid-template-columns: 350px 1fr;
+        gap: 40px;
+        margin-bottom: 100px;
+    }
+
+    .cofounder-card.reverse {
+        grid-template-columns: 1fr 350px;
+    }
+
+    .cofounder-image-wrapper {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 968px) {
+    .cofounder-card,
+    .cofounder-card.reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 80px;
+    }
+
+    .cofounder-card.reverse .cofounder-image-wrapper,
+    .cofounder-card.reverse .cofounder-content {
+        order: initial;
+    }
+
+    .cofounder-image-wrapper {
+        width: 300px;
+        height: 300px;
+    }
+
+    .about-hero-title {
+        font-size: 3rem;
+    }
+
+    .mission-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        min-height: 60vh;
+        padding: 100px 20px 60px;
+    }
+
+    .about-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .about-hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .cofounders-section {
+        padding: 60px 20px;
+    }
+
+    .cofounder-name {
+        font-size: 2rem;
+    }
+
+    .cofounder-role {
+        font-size: 1.1rem;
+    }
+
+    .cofounder-description {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .expertise-tags {
+        gap: 8px;
+    }
+
+    .expertise-tag {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    .mission-content p {
+        font-size: 1.1rem;
+    }
+
+    .btn-home {
+        padding: 18px 40px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero-title {
+        font-size: 2rem;
+    }
+
+    .about-hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .cofounder-image-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+
+    .cofounder-name {
+        font-size: 1.8rem;
+    }
+
+    .cofounder-role {
+        font-size: 1rem;
+    }
+
+    .cofounder-description {
+        font-size: 0.95rem;
+    }
+
+    .mission-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .mission-content p {
+        font-size: 1rem;
+    }
+
+    .btn-home {
+        padding: 15px 35px;
+        font-size: 1rem;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
