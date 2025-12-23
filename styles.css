@@ -354,6 +354,16 @@ p, span, a {
     opacity: 1;
 }
 
+/* Hide cursor on mobile/touch devices */
+@media (max-width: 1024px), (hover: none), (pointer: coarse) {
+    .cursor,
+    .cursor-follower {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+}
+
 /* ========================================
    NAVIGATION (Apple-style)
    ======================================== */
