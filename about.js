@@ -181,16 +181,28 @@ function animateImageLoad() {
     const images = document.querySelectorAll('.cofounder-image');
     
     images.forEach((img, index) => {
+        // Performance hints
+        try { img.loading = 'lazy'; img.decoding = 'async'; } catch {}
+
+        // Prepare initial state
+        img.style.transition = 'all 0.6s ease';
         img.style.opacity = '0';
         img.style.transform = 'scale(0.9)';
-        
+
+        const reveal = () => {
+            img.style.opacity = '1';
+            img.style.transform = 'scale(1)';
+        };
+
+        // Animate on load
         img.addEventListener('load', function() {
-            setTimeout(() => {
-                this.style.transition = 'all 0.6s ease';
-                this.style.opacity = '1';
-                this.style.transform = 'scale(1)';
-            }, index * 200);
+            setTimeout(reveal, index * 200);
         });
+
+        // If image is already cached/loaded, reveal immediately
+        if (img.complete && img.naturalWidth > 0) {
+            setTimeout(reveal, index * 200);
+        }
     });
 }
 
