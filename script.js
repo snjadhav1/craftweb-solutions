@@ -399,6 +399,73 @@ animateParticles();
 // ========================================
 // 3D TILT EFFECT (Premium)
 // ========================================
+
+// ========================================
+// IMAGE FALLBACKS (Auto-fix PNG/JPG/JPEG/WebP)
+// Prevent blank images across devices by retrying alternate extensions
+(function() {
+    const placeholderSVG = (
+        "<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'>" +
+        "<defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'>" +
+        "<stop offset='0%' stop-color='#1e293b'/><stop offset='100%' stop-color='#0f172a'/></linearGradient></defs>" +
+        "<rect width='400' height='400' rx='20' fill='url(#g)'/>" +
+        "<circle cx='200' cy='160' r='70' fill='#334155'/>" +
+        "<rect x='90' y='260' width='220' height='24' rx='12' fill='#334155'/>" +
+        "<text x='200' y='330' fill='#94a3b8' font-size='16' text-anchor='middle' font-family='Poppins,Arial,sans-serif'>Image placeholder</text>" +
+        "</svg>"
+    );
+    const PLACEHOLDER_URL = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(placeholderSVG);
+
+    function buildAlternateUrls(absUrl) {
+        try {
+            const u = new URL(absUrl, window.location.href);
+            const path = u.pathname;
+            const lastSlash = path.lastIndexOf('/');
+            const basePath = path.substring(0, lastSlash + 1);
+            const file = path.substring(lastSlash + 1);
+            const dotIdx = file.lastIndexOf('.');
+            if (dotIdx < 0) return [];
+            const name = file.substring(0, dotIdx);
+            const ext = file.substring(dotIdx + 1).toLowerCase();
+            const orders = {
+                png: ['jpg', 'jpeg', 'webp'],
+                jpg: ['jpeg', 'png', 'webp'],
+                jpeg: ['jpg', 'png', 'webp'],
+                webp: ['jpg', 'jpeg', 'png']
+            };
+            const tryExts = orders[ext] || ['png', 'jpg', 'jpeg', 'webp'];
+            const origin = u.origin;
+            const candidates = tryExts.map(e => origin + basePath + name + '.' + e);
+            return candidates;
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function attachImageFallback(img) {
+        const original = img.currentSrc || img.src || img.getAttribute('src');
+        if (!original) return;
+        // Hint the browser for better perf on mobile
+        try { img.loading = 'lazy'; img.decoding = 'async'; } catch {}
+
+        const candidates = buildAlternateUrls(original);
+        let idx = 0;
+        const onError = () => {
+            if (idx < candidates.length) {
+                img.src = candidates[idx++];
+            } else {
+                img.src = PLACEHOLDER_URL;
+                img.removeEventListener('error', onError);
+            }
+        };
+        img.addEventListener('error', onError);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('img').forEach(attachImageFallback);
+    });
+})();
+// ========================================
 const tiltElements = document.querySelectorAll('[data-tilt]');
 
 tiltElements.forEach(element => {
