@@ -319,6 +319,7 @@ p, span, a {
    CUSTOM CURSOR (Premium)
    ======================================== */
 .cursor {
+    display: none !important;
     width: 40px;
     height: 40px;
     border: 2px solid var(--primary-color);
@@ -337,6 +338,7 @@ p, span, a {
 }
 
 .cursor-follower {
+    display: none !important;
     width: 10px;
     height: 10px;
     background: var(--primary-color);
