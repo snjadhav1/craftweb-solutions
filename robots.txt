@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://craftwebsolutions.co.in/sitemap.xml

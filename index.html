@@ -3,21 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="description" content="Craftweb Solutions - Your trusted digital partner offering professional website development, social media management, graphic design, digital marketing, branding services, IT consulting, academic project guidance, and internship programs for students and businesses.">
     <meta name="keywords" content="website development, e-commerce website, social media management, Instagram management, graphic design, logo design, digital marketing, SEO services, branding services, IT consulting, final year project guidance, engineering project help, internship program, web design India, business website, portfolio website">
     <meta name="author" content="Craftweb Solutions">
+    <meta name="geo.region" content="IN-MH">
+    <meta name="geo.placename" content="Maharashtra, India">
+    <meta name="ICBM" content="18.5204,73.8567">
+    <link rel="canonical" href="https://craftwebsolutions.co.in/">
     <meta property="og:title" content="Craftweb Solutions - Professional Digital Services Provider">
     <meta property="og:description" content="Comprehensive digital services including website development, social media management, graphic design, and IT consulting for businesses and students.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://craftwebsolutions.co.in/">
+    <meta property="og:site_name" content="Craftweb Solutions">
+    <meta property="og:image" content="https://craftwebsolutions.co.in/logo.png">
+    <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Craftweb Solutions - Professional Digital Services Provider">
+    <meta name="twitter:description" content="Website development, design, digital marketing, and IT consulting services for businesses and students.">
+    <meta name="twitter:image" content="https://craftwebsolutions.co.in/logo.png">
     <title>Craftweb Solutions - Professional Digital Services Provider</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://craftwebsolutions.co.in/#organization",
+                    "name": "Craftweb Solutions",
+                    "url": "https://craftwebsolutions.co.in/",
+                    "logo": "https://craftwebsolutions.co.in/logo.png",
+                    "email": "infocraftwebsolutions@gmail.com",
+                    "telephone": "+91-7038524194",
+                    "sameAs": []
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://craftwebsolutions.co.in/#website",
+                    "url": "https://craftwebsolutions.co.in/",
+                    "name": "Craftweb Solutions",
+                    "publisher": {
+                        "@id": "https://craftwebsolutions.co.in/#organization"
+                    },
+                    "inLanguage": "en-IN"
+                },
+                {
+                    "@type": "ProfessionalService",
+                    "@id": "https://craftwebsolutions.co.in/#service",
+                    "name": "Craftweb Solutions",
+                    "description": "Professional website development, branding, digital marketing, social media management, and IT consulting services.",
+                    "areaServed": "India",
+                    "url": "https://craftwebsolutions.co.in/",
+                    "email": "infocraftwebsolutions@gmail.com",
+                    "telephone": "+91-7038524194",
+                    "priceRange": "$$",
+                    "serviceType": [
+                        "Website Development",
+                        "Social Media Management",
+                        "Graphic Design",
+                        "Digital Marketing",
+                        "Branding",
+                        "IT Consulting"
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": "https://craftwebsolutions.co.in/#faq",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "What services does Craftweb Solutions provide?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "We provide website development, social media management, graphic design, digital marketing, branding, IT consulting, project guidance, and internships."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How can I contact Craftweb Solutions for a project?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Use the contact form on this website or email infocraftwebsolutions@gmail.com with your project requirements."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
 </head>
 <body>
     <!-- Cursor follower -->
@@ -545,6 +628,7 @@
                 </div>
 
                 <form class="contact-form" id="contactForm">
+                    <input type="text" id="contactWebsite" name="website" autocomplete="off" tabindex="-1" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;" aria-hidden="true">
                     <div class="form-group">
                         <input type="text" id="contactName" placeholder="Your Name" required>
                     </div>
@@ -637,6 +721,7 @@
                 const email = document.getElementById('contactEmail').value.trim();
                 const service = document.getElementById('contactService').value;
                 const message = document.getElementById('contactMessage').value.trim();
+                const website = document.getElementById('contactWebsite').value.trim();
 
                 // ==========================================
                 // FORM VALIDATION
@@ -707,7 +792,8 @@
                             name: name,
                             email: email,
                             service: service,
-                            message: message
+                            message: message,
+                            website: website
                         })
                     });
 

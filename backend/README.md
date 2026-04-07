@@ -37,11 +37,7 @@ CREATE POLICY "Allow anonymous insert" ON contact_submissions
     TO anon
     WITH CHECK (true);
 
--- Allow reading data (for testing)
-CREATE POLICY "Allow anonymous select" ON contact_submissions
-    FOR SELECT
-    TO anon
-    USING (true);
+-- Keep read access private. Do not enable anonymous SELECT in production.
 ```
 
 3. Click the green **"Run"** button (or press Ctrl + Enter)
@@ -93,8 +89,28 @@ This will install:
 - **@supabase/supabase-js** - Supabase database client
 - **cors** - Allows frontend to connect
 - **dotenv** - Environment variables
+- **nodemailer** - Sends contact form emails
 
 Wait for installation to complete (might take 1-2 minutes).
+
+### 3.4 Create `.env` file in backend folder
+Add the following values:
+
+```env
+PORT=3000
+ALLOWED_ORIGIN=http://localhost:5500
+SUPABASE_URL=YOUR_SUPABASE_URL
+SUPABASE_SERVICE_ROLE_KEY=YOUR_SUPABASE_SERVICE_ROLE_KEY
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=infocraftwebsolutions@gmail.com
+SMTP_PASS=YOUR_GMAIL_APP_PASSWORD
+CONTACT_RECEIVER=infocraftwebsolutions@gmail.com
+ADMIN_READ_TOKEN=CHANGE_THIS_TO_A_LONG_RANDOM_TOKEN
+```
+
+Use a Gmail App Password for `SMTP_PASS` (not your normal Gmail password).
 
 ---
 
@@ -150,11 +166,10 @@ If successful, you'll see a green message:
 5. You'll see your submitted form data! 🎉
 
 ### 6.2 Or check via API
-Open this URL in your browser while the server is running:
-```
-http://localhost:3000/api/contacts
-```
-This shows all submissions in JSON format.
+Use a tool like Postman and send a request:
+- URL: `http://localhost:3000/api/contacts`
+- Method: `GET`
+- Header: `x-admin-token: <your ADMIN_READ_TOKEN value>`
 
 ---
 

@@ -137,7 +137,14 @@ Click on **"Environment Variables"** section and add these:
 | Name | Value |
 |------|-------|
 | `SUPABASE_URL` | `https://xghstvviuekonacagfej.supabase.co` |
-| `SUPABASE_ANON_KEY` | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnaHN0dnZpdWVrb25hY2FnZmVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MjQxODMsImV4cCI6MjA4MTIwMDE4M30.DxOUjdspH_bfP9X9CcmwkiNmY28hmTubTTflK7MchFg` |
+| `SUPABASE_ANON_KEY` | `YOUR_SUPABASE_ANON_KEY` |
+| `SUPABASE_SERVICE_ROLE_KEY` | `YOUR_SUPABASE_SERVICE_ROLE_KEY` |
+| `SMTP_HOST` | `smtp.gmail.com` |
+| `SMTP_PORT` | `587` |
+| `SMTP_SECURE` | `false` |
+| `SMTP_USER` | `infocraftwebsolutions@gmail.com` |
+| `SMTP_PASS` | `YOUR_GMAIL_APP_PASSWORD` |
+| `CONTACT_RECEIVER` | `infocraftwebsolutions@gmail.com` |
 
 For each variable:
 1. Enter the **Name** (like `SUPABASE_URL`)
@@ -182,11 +189,12 @@ After deployment completes:
 
 ### "Environment variables" error
 - Go to Vercel Project → Settings → Environment Variables
-- Make sure both `SUPABASE_URL` and `SUPABASE_ANON_KEY` are added correctly
+- Make sure `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SMTP_USER`, and `SMTP_PASS` are added correctly
 
 ### Contact form not working after deployment
 - Check browser console (F12) for errors
 - Verify environment variables are set in Vercel
+- For Gmail SMTP, make sure you are using an App Password (not normal account password)
 
 ### Need to update your website?
 After making changes locally:

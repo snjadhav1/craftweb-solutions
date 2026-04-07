@@ -36,11 +36,9 @@ CREATE POLICY "Allow anonymous insert" ON contact_submissions
     TO anon
     WITH CHECK (true);
 
--- STEP 5: Create policy to allow SELECT (reading) - Optional, for admin/testing
-CREATE POLICY "Allow anonymous select" ON contact_submissions
-    FOR SELECT
-    TO anon
-    USING (true);
+-- STEP 5: Keep read access private
+-- Do NOT enable anonymous SELECT in production.
+-- Read submissions only through secured server endpoints.
 
 -- ==========================================
 -- HELPFUL QUERIES FOR VIEWING YOUR DATA

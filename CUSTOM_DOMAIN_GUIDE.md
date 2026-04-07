@@ -37,7 +37,42 @@ Scroll down to **"Environment Variables"** section:
 
 **Add Variable 2:**
 1. **Name:** `SUPABASE_ANON_KEY`
-2. **Value:** `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnaHN0dnZpdWVrb25hY2FnZmVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MjQxODMsImV4cCI6MjA4MTIwMDE4M30.DxOUjdspH_bfP9X9CcmwkiNmY28hmTubTTflK7MchFg`
+2. **Value:** `YOUR_SUPABASE_ANON_KEY` (copy from Supabase Project Settings -> API)
+3. Click **"Add"**
+
+**Add Variable 3 (Recommended):**
+1. **Name:** `SUPABASE_SERVICE_ROLE_KEY`
+2. **Value:** `YOUR_SUPABASE_SERVICE_ROLE_KEY` (keep this secret; server-side only)
+3. Click **"Add"**
+
+**Add Variable 4:**
+1. **Name:** `SMTP_HOST`
+2. **Value:** `smtp.gmail.com`
+3. Click **"Add"**
+
+**Add Variable 5:**
+1. **Name:** `SMTP_PORT`
+2. **Value:** `587`
+3. Click **"Add"**
+
+**Add Variable 6:**
+1. **Name:** `SMTP_SECURE`
+2. **Value:** `false`
+3. Click **"Add"**
+
+**Add Variable 7:**
+1. **Name:** `SMTP_USER`
+2. **Value:** `infocraftwebsolutions@gmail.com`
+3. Click **"Add"**
+
+**Add Variable 8:**
+1. **Name:** `SMTP_PASS`
+2. **Value:** `YOUR_GMAIL_APP_PASSWORD`
+3. Click **"Add"**
+
+**Add Variable 9:**
+1. **Name:** `CONTACT_RECEIVER`
+2. **Value:** `infocraftwebsolutions@gmail.com`
 3. Click **"Add"**
 
 ### Step 5: Deploy!

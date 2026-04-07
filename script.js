@@ -541,35 +541,9 @@ window.addEventListener('scroll', () => {
 });
 
 // ========================================
-// FORM SUBMISSION (Enhanced)
+// FORM SUBMISSION
 // ========================================
-const contactForm = document.querySelector('.contact-form');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const submitButton = contactForm.querySelector('.btn-primary');
-        const originalText = submitButton.querySelector('.btn-text').textContent;
-        
-        // Animate button
-        submitButton.querySelector('.btn-text').textContent = 'Sending...';
-        submitButton.style.pointerEvents = 'none';
-        
-        // Simulate sending (replace with actual form submission)
-        setTimeout(() => {
-            submitButton.querySelector('.btn-text').textContent = 'Sent Successfully! ✓';
-            submitButton.style.background = 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)';
-            
-            setTimeout(() => {
-                submitButton.querySelector('.btn-text').textContent = originalText;
-                submitButton.style.background = '';
-                submitButton.style.pointerEvents = '';
-                contactForm.reset();
-            }, 3000);
-        }, 1500);
-    });
-}
+// Handled by the dedicated API submission script in index.html
 
 // ========================================
 // PORTFOLIO FILTER (Optional Enhancement)
