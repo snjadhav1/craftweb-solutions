@@ -1,0 +1,59 @@
+# ─────────────────────────────────────────────
+#  robots.txt — CraftWeb Solutions
+#  https://craftwebsolutions.co.in/
+# ─────────────────────────────────────────────
+
+# Allow all standard search engine bots
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /.env
+Disallow: /server.js
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# ── Google ────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+# ── Bing ─────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+
+# ── AI CRAWLERS — explicitly allowed ─────────
+# ChatGPT / OpenAI
+User-agent: GPTBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google Gemini / Bard
+User-agent: Google-Extended
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Common Crawl (used by many AI training sets)
+User-agent: CCBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://craftwebsolutions.co.in/sitemap.xml

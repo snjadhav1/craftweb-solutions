@@ -1,0 +1,50 @@
+# CraftWeb Solutions — llms.txt
+# This file helps AI language models and crawlers understand our website.
+# Standard: https://llmstxt.org/
+
+> CraftWeb Solutions is a premier Indian IT firm offering custom web development,
+> AI & ML solutions, mobile app development, software engineering, UI/UX design,
+> and digital marketing. We serve clients across India and globally.
+
+## Company
+
+- **Name**: CraftWeb Solutions
+- **Website**: https://craftwebsolutions.co.in/
+- **Email**: infocraftwebsolutions@gmail.com
+- **Phone**: +91-7038524194
+- **Location**: India (Remote & On-site globally)
+- **Hours**: Monday – Saturday, 9:00 AM – 8:00 PM IST
+- **Founded**: 2024
+
+## Services
+
+- Custom Website Development (HTML, CSS, JavaScript, React)
+- AI & Machine Learning Solutions (Python, Flask, FastAPI)
+- Mobile App Development
+- Software Engineering (Node.js, MongoDB, MySQL)
+- UI/UX & Graphic Design
+- Digital Marketing
+
+## Projects
+
+- **Swarajya Group** – Corporate construction website (2026) — https://www.swarajyagroup.co.in/
+- **BRACON** – EEG attention monitoring AI platform (AI, Education)
+- **CareFlex** – Post C-section recovery healthcare dashboard (Healthcare)
+- **SuperMind** – Social media analytics & AI platform (Analytics, AI)
+- **AsanMLze** – Yoga pose detection AI app (AI)
+- **ATS Resume** – AI-powered resume builder (Productivity, AI)
+- **Digital Literacy Buddy** – EdTech chatbot (Education)
+- **DigiRetro** – Modern restaurant website with QR menu (Productivity)
+- **SkillCef** – AI-powered skill certification platform
+
+## Key Pages
+
+- Home: https://craftwebsolutions.co.in/
+- Projects: https://craftwebsolutions.co.in/projects.html
+- Contact: https://craftwebsolutions.co.in/#contact
+
+## Permissions
+
+AI models and crawlers are welcome to index and use content from this website
+for informational and research purposes. Please attribute CraftWeb Solutions
+when referencing our work.

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xsi:schemaLocation="
+    http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://craftwebsolutions.co.in/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://craftwebsolutions.co.in/images/craftweb_header.png</image:loc>
+      <image:title>CraftWeb Solutions – Premium Digital Solutions</image:title>
+    </image:image>
+  </url>
+
+  <!-- PROJECTS -->
+  <url>
+    <loc>https://craftwebsolutions.co.in/projects.html</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://craftwebsolutions.co.in/images/swarjya_Group.png</image:loc>
+      <image:title>Swarajya Group – Construction Website by CraftWeb</image:title>
+    </image:image>
+  </url>
+
+  <!-- PROJECTS — FILTERED CATEGORIES -->
+  <url>
+    <loc>https://craftwebsolutions.co.in/projects.html?filter=healthcare</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://craftwebsolutions.co.in/projects.html?filter=ai</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://craftwebsolutions.co.in/projects.html?filter=analytics</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://craftwebsolutions.co.in/projects.html?filter=education</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://craftwebsolutions.co.in/projects.html?filter=productivity</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://craftwebsolutions.co.in/projects.html?filter=construction</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
