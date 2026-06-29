@@ -682,8 +682,9 @@ button:disabled{opacity:.65;cursor:not-allowed}
   .cat-grid{grid-template-columns:repeat(2,1fr);gap:14px}
   .cat-card{height:240px}
   .pf-cta{padding:28px 20px}
-  .pf-cta-inner{flex-direction:column;align-items:flex-start;gap:20px}
+  .pf-cta-inner{flex-direction:column;align-items:center;gap:20px;text-align:center}
   .pf-cta-num{font-size:2.4rem}
+  .pf-cta-label{max-width:100%;margin:0 auto}
   .pf-see-all{width:100%;justify-content:center;text-align:center;display:flex}
 
   /* Why us */
